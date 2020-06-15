@@ -9,7 +9,9 @@ app.secret_key = "Nothing"
 def index():
     return render_template("index.html")
 
+@app.route("/login")
+def LoginPage():
+    return render_template("login.html")
 
-    
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000)
