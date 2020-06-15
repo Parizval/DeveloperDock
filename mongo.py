@@ -39,12 +39,12 @@ def Register(email,name,password):
         LoginCollection.insert_one(q2)
         return True
 
-def Login(email,password)
+def Login(email,password):
     l1 = {"email": email}
     res = LoginCollection.find(l1)
 
     data = {}
-    data['check'] = False
+
     for i in res:
         if pbkdf2_sha256.verify(password, i['password']):
             data['name'] = i['name']
