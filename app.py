@@ -52,7 +52,6 @@ def sign_action():
         data['check'] = True 
         data['link'] = '/dashboard'
   
-    data = {}
    
 
     return data
