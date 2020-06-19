@@ -381,11 +381,11 @@ function () {
               .done(function(data){
                   if (data.check)
                   {
-					$(location).attr('href', data.link)
+					$(location).attr('href', data.link);
                   }
                   else{
-                    //   
-					alert("Register")
+                      
+					alert("Register");
                   }
               });
 		event.preventDefault();
@@ -402,13 +402,16 @@ function () {
                     url : '/login_action'
           })
               .done(function(data){
-                  if (data.check)
+		
+				  if (data.check)
                   {
-					$(location).attr('href', data.link);	
+					$(location).attr('href', data.link);
                   }
                   else{
-						alert("Error")
+                      
+					alert("Invalid Credentials");
                   }
+
               });
 	event.preventDefault();
 });

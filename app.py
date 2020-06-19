@@ -15,6 +15,10 @@ def index():
 def LoginPage():
     return render_template("login.html")
 
+@app.route("/dashboard")
+def DashBoardPage():
+    return render_template("index.html")
+
 # Ajax Function 
 @app.route('/login_action', methods=['POST'])
 def login_action():
@@ -23,6 +27,14 @@ def login_action():
     password = request.form['password']
     print(email, password)
     data = {}
+    result = mongo.Login(email,password)
+    if result['check']:
+        session['email'] = email 
+        session['name'] = result['name'] 
+
+        data['check'] = True 
+        data['link'] = "/dashboard"
+    
     return data
 
 @app.route('/sign_action', methods=['POST'])
@@ -38,7 +50,7 @@ def sign_action():
         session['email'] = email 
         session['name'] = name 
         data['check'] = True 
-        data['link'] = '/'
+        data['link'] = '/dashboard'
   
     data = {}
    

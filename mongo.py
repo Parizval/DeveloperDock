@@ -44,10 +44,10 @@ def Login(email,password):
     res = LoginCollection.find(l1)
 
     data = {}
-
+    data['check'] = False
     for i in res:
         if pbkdf2_sha256.verify(password, i['password']):
             data['name'] = i['name']
-
+            data['check'] = True
     print(data)
     return data
