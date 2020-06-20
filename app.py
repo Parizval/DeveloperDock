@@ -18,7 +18,12 @@ def LoginPage():
 @app.route("/dashboard")
 def DashBoardPage():
     if "name" in session:
-        return "DashBoard in Development {}".format(session['name'])
+        return render_template("/Dashboard/light/index.html",name=session['name'],email=session['email'])
+    return redirect("/")
+
+@app.route("/logout")
+def LogOut():
+    session.clear()
     return redirect("/")
 
 # Ajax Function 
