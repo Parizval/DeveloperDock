@@ -17,7 +17,9 @@ def LoginPage():
 
 @app.route("/dashboard")
 def DashBoardPage():
-    return render_template("index.html")
+    if "name" in session:
+        return "DashBoard in Development {}".format(session['name'])
+    return redirect("/")
 
 # Ajax Function 
 @app.route('/login_action', methods=['POST'])
@@ -52,8 +54,6 @@ def sign_action():
         data['check'] = True 
         data['link'] = '/dashboard'
   
-   
-
     return data
 
 if __name__ == "__main__":
