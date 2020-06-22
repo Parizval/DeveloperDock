@@ -32,6 +32,10 @@ def Strategy():
         return render_template("/Dashboard/light/strategy.html",name=session['name'],email=session['email'])
     return redirect("/")
 
+@app.errorhandler(404)
+def error404(error):
+    return render_template('404.html'), 404
+
 # Ajax Function 
 @app.route('/login_action', methods=['POST'])
 def login_action():
