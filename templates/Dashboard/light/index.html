@@ -67,7 +67,6 @@
                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
                             <div class="dropdown-menu dropdown-menu-right animated slideInRight">
                                 <ul class="dropdown-user">
-                                    <li role="separator" class="divider"></li>
                                     <li><a href="#"> Profile</a></li>
                                     <li><a href="#"> Balance</a></li>
                                     <li><a href="#"> Inbox</a></li>
@@ -90,13 +89,6 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebar-menu">
-                        <li class="nav-devider"></li>
-                        <li class="nav-label">Home</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard <span class="label label-rouded label-primary pull-right">6</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="index.html">Dashboard 1 </a></li><li><a href="index1.html">Dashboard 2 </a></li><li><a href="index2.html">Dashboard 3 </a></li><li><a href="index3.html">Dashboard 4 </a></li><li><a href="index4.html">Dashboard 5 </a></li><li><a href="index5.html">Dashboard 6 </a></li>
-                            </ul>
-                        </li>
                         <li class="nav-label">Layout</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-columns"></i><span class="hide-menu">Layout</span></a>
                             <ul aria-expanded="false" class="collapse">
@@ -219,7 +211,7 @@
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item" style="color:cornflowerblue">Welcome</li>
-                        <li class="breadcrumb-item">Dashboard</li>
+                        <li class="breadcrumb-item">{{ name }}</li>
                     </ol>
                 </div>
             </div>
@@ -298,7 +290,7 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-title">
-                                <h4>Production</h4>
+                                <h4>Language</h4>
                             </div>
                             <div class="team-chart">
                                 <div id="np-Pie" style="height: 370px"></div>
@@ -306,86 +298,29 @@
                         </div>
                     </div>
                     <!-- /# column -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-title">
-                                <h4>Recent Orders </h4>
+                                <h4> Projects </h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
+                                                <th>Id</th>
                                                 <th>Name</th>
-                                                <th>Product</th>
-                                                <th>quantity</th>
+                                                <th>Strategy</th>
+                                                <th>BackEnd Language</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <div class="round-img">
-                                                        <a href=""><img class="w-35" src="/static/Dashboard/light/images/avatar/1.jpg" alt=""></a>
-                                                    </div>
+                                                   Number
                                                 </td>
                                                 <td>Lew Shawon</td>
-                                                <td><span>Dell-985</span></td>
-                                                <td><span>456 pcs</span></td>
-                                                <td><span class="badge badge-success">Done</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="round-img">
-                                                        <a href=""><img class="w-35" src="/static/Dashboard/light/images/avatar/1.jpg" alt=""></a>
-                                                    </div>
-                                                </td>
-                                                <td>Lew Shawon</td>
-                                                <td><span>Asus-565</span></td>
-                                                <td><span>456 pcs</span></td>
-                                                <td><span class="badge badge-warning">Pending</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="round-img">
-                                                        <a href=""><img class="w-35" src="/static/Dashboard/light/images/avatar/1.jpg" alt=""></a>
-                                                    </div>
-                                                </td>
-                                                <td>lew Shawon</td>
-                                                <td><span>Dell-985</span></td>
-                                                <td><span>456 pcs</span></td>
-                                                <td><span class="badge badge-success">Done</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="round-img">
-                                                        <a href=""><img class="w-35" src="/static/Dashboard/light/images/avatar/1.jpg" alt=""></a>
-                                                    </div>
-                                                </td>
-                                                <td>lew Shawon</td>
-                                                <td><span>Dell-985</span></td>
-                                                <td><span>456 pcs</span></td>
-                                                <td><span class="badge badge-success">Done</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="round-img">
-                                                        <a href=""><img class="w-35" src="/static/Dashboard/light/images/avatar/1.jpg" alt=""></a>
-                                                    </div>
-                                                </td>
-                                                <td>lew Shawon</td>
-                                                <td><span>Dell-985</span></td>
-                                                <td><span>456 pcs</span></td>
-                                                <td><span class="badge badge-success">Done</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="round-img">
-                                                        <a href=""><img class="w-35" src="/static/Dashboard/light/images/avatar/1.jpg" alt=""></a>
-                                                    </div>
-                                                </td>
-                                                <td>lew Shawon</td>
                                                 <td><span>Dell-985</span></td>
                                                 <td><span>456 pcs</span></td>
                                                 <td><span class="badge badge-success">Done</span></td>
@@ -397,17 +332,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
-                        <div class="card nestable-cart">
-                            <div class="card-title">
-                                <h4>Store Location</h4>
-
-                            </div>
-                            <div class="datamap">
-                                <div id="world-datamap"></div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- /# column -->
                 </div>
                 <!-- /# row -->
@@ -469,100 +393,10 @@
                         </div>
                         <!-- /# card -->
                     </div>
-                    <div class="col-lg-4 responsive-50">
-                        <div class="card">
-                            <div class="card-title">
-                                <h4>Project</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="recent-meaasge">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#"><img alt="..." src="/static/Dashboard/light/images/avatar/1.jpg" class="media-object"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">john doe</h4>
-                                            <div class="meaasge-date">15 minutes Ago</div>
-                                            <p class="f-s-12">We are happy about your service </p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#"><img alt="..." src="/static/Dashboard/light/images/avatar/2.jpg" class="media-object"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Mr. John</h4>
-                                            <div class="meaasge-date">40 minutes ago</div>
-                                            <p class="f-s-12">Quick service and good serve </p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#"><img alt="..." src="/static/Dashboard/light/images/avatar/3.jpg" class="media-object"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Mr. Michael</h4>
-                                            <div class="meaasge-date">1 minutes ago</div>
-                                            <p class="f-s-12">We like your birthday cake </p>
-                                        </div>
-                                    </div>
-                                    <div class="media no-border">
-                                        <div class="media-left">
-                                            <a href="#"><img alt="..." src="/static/Dashboard/light/images/avatar/2.jpg" class="media-object"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Mr. John</h4>
-                                            <div class="meaasge-date">40 minutes ago</div>
-                                            <p class="f-s-12">Quick service and good serve </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 responsive-100">
-                        <div class="card">
-                            <div class="card-title">
-                                <h4>Todo</h4>
-                            </div>
-                            <div class="todo-list">
-                                <div class="tdl-holder">
-                                    <div class="tdl-content">
-                                        <ul>
-                                            <li class="color-primary">
-                                                <label>
-                                                <input type="checkbox"><i class="bg-primary"></i><span>Post three to six times on Twitter.</span>
-                                                <a href='#' class="ti-close"></a>
-                                            </label>
-                                            </li>
-                                            <li class="color-success">
-                                                <label>
-                                                <input type="checkbox" checked><i class="bg-success"></i><span>Post one to two times on Facebook.</span>
-                                                <a href='#' class="ti-close"></a>
-                                            </label>
-                                            </li>
-                                            <li class="color-warning">
-                                                <label>
-                                                <input type="checkbox" checked><i class="bg-warning"></i><span>Follow back those who follow you</span>
-                                                <a href='#' class="ti-close"></a>
-                                            </label>
-                                            </li>
-                                            <li class="color-danger">
-                                                <label>
-                                                <input type="checkbox" checked><i class="bg-danger"></i><span>Connect with one new person</span>
-                                                <a href='#' class="ti-close"></a>
-                                            </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <input type="text" class="tdl-new form-control" placeholder="Type here">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                    
 
                 </div>
-
 
                 <div class="row">
                     <div class="col-lg-4">
@@ -641,87 +475,8 @@
                         </div>
                     </div>
                     <!-- /# column -->
-                    <div class="col-lg-4">
-                        <div class="card bg-primary">
-                            <div class="weather-widget">
-                                <div id="weather-one" class="weather-one p-22"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-dark">
-                            <div class="testimonial-widget-one p-17">
-                                <div class="testimonial-widget-one owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                <i class="fa fa-quote-right"></i>
-                                            </div>
-                                            <img class="testimonial-author-img" src="/static/Dashboard/light/images/avatar/1.jpg" alt="" />
-                                            <div class="testimonial-author">TYRION LANNISTER</div>
-                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                <i class="fa fa-quote-right"></i>
-                                            </div>
-                                            <img class="testimonial-author-img" src="/static/Dashboard/light/images/avatar/1.jpg" alt="" />
-                                            <div class="testimonial-author">TYRION LANNISTER</div>
-                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                <i class="fa fa-quote-right"></i>
-                                            </div>
-                                            <img class="testimonial-author-img" src="/static/Dashboard/light/images/avatar/1.jpg" alt="" />
-                                            <div class="testimonial-author">TYRION LANNISTER</div>
-                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                <i class="fa fa-quote-right"></i>
-                                            </div>
-                                            <img class="testimonial-author-img" src="/static/Dashboard/light/images/avatar/1.jpg" alt="" />
-                                            <div class="testimonial-author">TYRION LANNISTER</div>
-                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                <i class="fa fa-quote-right"></i>
-                                            </div>
-                                            <img class="testimonial-author-img" src="/static/Dashboard/light/images/avatar/1.jpg" alt="" />
-                                            <div class="testimonial-author">TYRION LANNISTER</div>
-                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                <i class="fa fa-quote-right"></i>
-                                            </div>
-                                            <img class="testimonial-author-img" src="/static/Dashboard/light/images/avatar/1.jpg" alt="" />
-                                            <div class="testimonial-author">TYRION LANNISTER</div>
-                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+               
                 </div>
 
                 <!-- End PAge Content -->
@@ -752,8 +507,6 @@
     <script src="/static/Dashboard/light/js/lib/datamap/datamaps.world.min.js"></script>
     <script src="/static/Dashboard/light/js/lib/datamap/datamap-init.js"></script>
 
-    <script src="/static/Dashboard/light/js/lib/weather/jquery.simpleWeather.min.js"></script>
-    <script src="/static/Dashboard/light/js/lib/weather/weather-init.js"></script>
     <script src="/static/Dashboard/light/js/lib/owl-carousel/owl.carousel.min.js"></script>
     <script src="/static/Dashboard/light/js/lib/owl-carousel/owl.carousel-init.js"></script>
 
