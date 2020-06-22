@@ -78,7 +78,9 @@ def StrategyAction():
     Language = request.form['Language']
     Cloud = request.form['Cloud']
     Check = request.form['Check']
-    print(ProjectName,LineCode,Language,Cloud,Check)
+    Function = request.form['Function']
+    Config  = request.form['Config']
+    print(ProjectName,LineCode,Language,Cloud,Check,Function,Config)
     return "asd"
 
 if __name__ == "__main__":
