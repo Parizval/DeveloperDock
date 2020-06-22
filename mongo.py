@@ -34,7 +34,7 @@ def Register(email,name,password):
     else:
         password = pbkdf2_sha256.hash(password)
         q2 = {"name": name, "email": email,
-              "password": password}
+              "password": password,"Id":str(uuid.uuid4())}
         
         LoginCollection.insert_one(q2)
         return True

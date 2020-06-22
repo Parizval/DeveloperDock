@@ -26,6 +26,12 @@ def LogOut():
     session.clear()
     return redirect("/")
 
+@app.route("/strategy")
+def Strategy():
+    if "name" in session:
+        return render_template("/Dashboard/light/strategy.html",name=session['name'],email=session['email'])
+    return redirect("/")
+
 # Ajax Function 
 @app.route('/login_action', methods=['POST'])
 def login_action():
