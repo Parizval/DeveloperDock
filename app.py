@@ -67,5 +67,15 @@ def sign_action():
   
     return data
 
+@app.route('/strategy_action',methods=['POST'])
+def StrategyAction():
+    ProjectName = request.form['ProjectName']
+    LineCode = request.form['LineCode']
+    Language = request.form['Language']
+    Cloud = request.form['Cloud']
+    Check = request.form['Check']
+    print(ProjectName,LineCode,Language,Cloud,Check)
+    return "asd"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000)
