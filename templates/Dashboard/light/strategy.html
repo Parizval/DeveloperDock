@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/Dashboard/light/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/enterprise.png">
     <title>Developer Dock - Kubernetes Load Balancing Solution</title>
     <!-- Custom CSS -->
     
@@ -27,7 +27,7 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon -->
-                        <b><img src="/static/Dashboard/light/images/logo.png" alt="homepage" class="dark-logo" /></b>
+                        <b><img src="/static/dashboard.png" alt="homepage" class="dark-logo" /></b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span><img src="/static/Dashboard/light/images/logo-text.png" alt="homepage" class="dark-logo" /></span>
@@ -247,7 +247,9 @@
                                                         Private Cloud
                                                     </label>
                                                     </div>
-                                                    <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> </div>
+                                                    <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> 
+                                                </div>
+                                            
                                                 </div>
                                             </div>
                                             <!--/span-->
@@ -259,19 +261,33 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Post Code</label>
-                                                        <input type="text" class="form-control">
+                                                        <div class="form-group">
+                                                            <label class="control-label">Do the Servers have identical configuration.</label>
+                                                            <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="Config" id="example1" value="Yes" checked>
+                                                            <label class="form-check-label" for="example1">
+                                                                Yes
+                                                            </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="Config" id="example2" value="No">
+                                                            <label class="form-check-label" for="example2">
+                                                                No
+                                                            </label>
+                                                            </div>
+                                                            <small class="form-control-feedback"> Identical configuration means that they have same amount of RAM, Storage etc. </small> 
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <!--/span-->
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Country</label>
-                                                        <select class="form-control">
-                                                            <option>--Select your Country--</option>
-                                                            <option>India</option>
-                                                            <option>Sri Lanka</option>
-                                                            <option>USA</option>
+                                                        <label>Functionalities Involved </label>
+                                                        <select class="form-control" id="Function">
+                                                            <option>--Select your Objective --</option>
+                                                            <option value="Simple">Simple Web Application</option>
+                                                            <option value="Payment">Payment GateWay or Session</option>
+                                                            <option value="Other">Other Function</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -359,7 +375,9 @@
                         LineCode :$('#LineCode').val(),
                         Language: $('#Language').val(),
                         Cloud: $("input:radio[name='exampleRadios']").val(),
-                        Check: check
+                        Check: check,
+                        Function: $('#Function').val(),
+                        Config :  $("input:radio[name='Config']").val()
                     },
                     type : "POST",
                     url : '/strategy_action'
