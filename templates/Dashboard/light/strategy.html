@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/static/Dashboard/light/images/favicon.png">
-    <title>CoinDash - Cryptocurrency Dashboard Admin Template</title>
+    <title>Developer Dock - Kubernetes Load Balancing Solution</title>
     <!-- Custom CSS -->
     
     <link href="/static/Dashboard/light/css/style.css" rel="stylesheet">
@@ -227,16 +227,16 @@
                                         <div class="row p-t-20">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">First Name</label>
-                                                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
+                                                    <label class="control-label">Project Name</label>
+                                                    <input type="text" id="ProjectName" class="form-control" placeholder="Developer Dock">
                                                     <small class="form-control-feedback"> This is inline help </small> </div>
                                             </div>
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group has-danger">
-                                                    <label class="control-label">Last Name</label>
-                                                    <input type="text" id="lastName" class="form-control form-control-danger" placeholder="12n">
-                                                    <small class="form-control-feedback"> This field has error. </small> </div>
+                                                    <label class="control-label">Lines of Code</label>
+                                                    <input type="number" id="lastName" class="form-control form-control-danger" placeholder="1000">
+                                                    <small class="form-control-feedback"> Code required to develop the BackEnd . </small> </div>
                                             </div>
                                             <!--/span-->
                                         </div>
@@ -244,18 +244,33 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Gender</label>
+                                                    <label class="control-label">Back End Language</label>
                                                     <select class="form-control">
-                                                        <option value="">Male</option>
-                                                        <option value="">Female</option>
+                                                        <option value="Python">Python</option>
+                                                        <option value="NodeJs">NodeJs</option>
+                                                        <option value="Go"> Go </option>
+                                                        <option value="Java">Java</option>
+                                                        <option value="Other">Other</option>
                                                     </select>
-                                                    <small class="form-control-feedback"> Select your gender </small> </div>
+                                                    <small class="form-control-feedback"> Select the language used at the backend of the Application. </small> </div>
                                             </div>
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Date of Birth</label>
-                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                                    <label class="control-label">Would be interested to use Kubernetes ? </label>
+                                                    <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="KubeCheck" id="exampleRadios1" value="Yes" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        Yes
+                                                    </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="KubeCheck" id="exampleRadios2" value="No">
+                                                    <label class="form-check-label" for="exampleRadios2">
+                                                        No
+                                                    </label>
+                                                    </div>
+                                                    <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> </div>
                                                 </div>
                                             </div>
                                             <!--/span-->
@@ -276,49 +291,52 @@
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Membership</label>
+                                                    <label class="control-label">Deployment Cloud</label>
                                                     <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="PublicCloud" checked>
                                                     <label class="form-check-label" for="exampleRadios1">
-                                                        Free
+                                                        Public Cloud 
                                                     </label>
                                                     </div>
                                                     <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="PrivateCloud">
                                                     <label class="form-check-label" for="exampleRadios2">
-                                                        Paid
+                                                        Private Cloud
                                                     </label>
                                                     </div>
-                                                    
+                                                    <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> </div>
                                                 </div>
                                             </div>
                                             <!--/span-->
                                         </div>
                                         <!--/row-->
-                                       
-                                       
-                                        <!--/row-->
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Post Code</label>
-                                                    <input type="text" class="form-control">
+                                        <div id="ExtraSection">
+                                            <h3 class="box-title m-t-40">Extra Details</h3>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Post Code</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Country</label>
-                                                    <select class="form-control">
-                                                        <option>--Select your Country--</option>
-                                                        <option>India</option>
-                                                        <option>Sri Lanka</option>
-                                                        <option>USA</option>
-                                                    </select>
+                                                <!--/span-->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Country</label>
+                                                        <select class="form-control">
+                                                            <option>--Select your Country--</option>
+                                                            <option>India</option>
+                                                            <option>Sri Lanka</option>
+                                                            <option>USA</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
+                                                <!--/span-->
                                             </div>
-                                            <!--/span-->
                                         </div>
+                                        <!--/row-->
+                                        
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -373,7 +391,7 @@
         $(document).ready(
             function(){
 
-              
+            //  $("#ExtraSection").hide();
 
             }
         )
