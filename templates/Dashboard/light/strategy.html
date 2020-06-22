@@ -195,7 +195,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group has-danger">
                                                     <label class="control-label">Lines of Code</label>
-                                                    <input type="number" id="lastName" class="form-control form-control-danger" placeholder="1000">
+                                                    <input type="number" id="LineCode" class="form-control form-control-danger" placeholder="1000">
                                                     <small class="form-control-feedback"> Code required to develop the BackEnd . </small> </div>
                                             </div>
                                             <!--/span-->
@@ -205,7 +205,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Back End Language</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" id="Language">
                                                         <option value="Python">Python</option>
                                                         <option value="NodeJs">NodeJs</option>
                                                         <option value="Go"> Go </option>
@@ -230,29 +230,19 @@
                                         </div>
                                         <!--/row-->
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Category</label>
-                                                    <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
-                                                        <option value="Category 1">Category 1</option>
-                                                        <option value="Category 2">Category 2</option>
-                                                        <option value="Category 3">Category 5</option>
-                                                        <option value="Category 4">Category 4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            
                                             <!--/span-->
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 offset-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Deployment Cloud</label>
                                                     <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="PublicCloud" checked>
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Public" checked>
                                                     <label class="form-check-label" for="exampleRadios1">
                                                         Public Cloud 
                                                     </label>
                                                     </div>
                                                     <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="PrivateCloud">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Private">
                                                     <label class="form-check-label" for="exampleRadios2">
                                                         Private Cloud
                                                     </label>
@@ -292,11 +282,9 @@
                                         
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-inverse btn-lg" style="margin-left:15%;">Cancel</button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-success btn-lg" id="Submit-Form"> <i class="fa fa-check"></i> Save</button>
+                                       
+                                        <div class="col-md-6 offset-md-6">
+                                            <button type="button" class="btn btn-success btn-lg" id="Submit-Form"> <i class="fa fa-check"></i> Submit</button>
                                         </div>
                                     </div>
                                    
@@ -342,6 +330,8 @@
     <script>
         $(document).ready(
             function(){
+            
+            var check = false; 
 
             $("#ExtraSection").hide();
             $("#Result").hide();
@@ -350,22 +340,43 @@
             $("#Kube-Yes").click(function(){
                 
                 $("#ExtraSection").show();
+                check = true ; 
             });
            
             $('#Kube-No').click(function(){
            
                 $("#ExtraSection").hide();
-                
+                check = false;  
             });
 
 
             $("#Submit-Form").click(function(){
 
-                alert("Test");
-               
 
+                $.ajax({
+                    data :{
+						ProjectName : $('#ProjectName').val(),
+                        LineCode :$('#LineCode').val(),
+                        Language: $('#Language').val(),
+                        Cloud: $("input:radio[name='exampleRadios']").val(),
+                        Check: check
+                    },
+                    type : "POST",
+                    url : '/strategy_action'
+          })
+              .done(function(data){
+		
+				  if (data.check)
+                  {
+					$(location).attr('href', data.link);
+                  }
+                  else{
+                      
+					alert("Invalid Credentials");
+                  }
 
-
+              });
+	            event.preventDefault();
 
             });
 
