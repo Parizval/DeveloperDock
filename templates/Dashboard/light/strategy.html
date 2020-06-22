@@ -76,7 +76,7 @@
                     <ul id="sidebar-menu">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard <span class="label label-rouded label-primary pull-right">6</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu"> <span class="label label-rouded label-primary pull-right">6</span></span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="index.html">Dashboard 1 </a></li><li><a href="index1.html">Dashboard 2 </a></li><li><a href="index2.html">Dashboard 3 </a></li><li><a href="index3.html">Dashboard 4 </a></li><li><a href="index4.html">Dashboard 5 </a></li><li><a href="index5.html">Dashboard 6 </a></li>
                             </ul>
@@ -205,7 +205,7 @@
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">{{ name }}</li>
                     </ol>
                 </div>
             </div>
@@ -217,7 +217,7 @@
                     <div class="col-lg-12 responsive-md-100">
                         <div class="card card-outline-primary">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white">Sample form</h4>
+                                <h4 class="m-b-0 text-white">Create Your Project Deployment and Traffic Strategy</h4>
                             </div>
                             <div class="card-body">
                                 <form action="#">
@@ -278,60 +278,25 @@
                                                 <div class="form-group">
                                                     <label class="control-label">Membership</label>
                                                     <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Free
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Paid
-  </label>
-</div>
-                                                    <!-- <div class="form-check">
-                                                        <label class="custom-control custom-radio">
-                                                            <input id="radio1" name="radio" type="radio" checked class="custom-control-input">
-                                                            <span class="custom-control-indicator"></span>
-                                                            <span class="custom-control-description">Free</span>
-                                                        </label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input id="radio2" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-indicator"></span>
-                                                            <span class="custom-control-description">Paid</span>
-                                                        </label>
-                                                    </div> -->
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                        Free
+                                                    </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                    <label class="form-check-label" for="exampleRadios2">
+                                                        Paid
+                                                    </label>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <!--/span-->
                                         </div>
                                         <!--/row-->
-                                        <h3 class="box-title m-t-40">Address</h3>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-md-12 ">
-                                                <div class="form-group">
-                                                    <label>Street</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>City</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>State</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
+                                       
+                                       
                                         <!--/row-->
                                         <div class="row">
                                             <div class="col-md-6">
@@ -355,19 +320,32 @@
                                             <!--/span-->
                                         </div>
                                     </div>
-                                    <div class="form-actions">
-                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
-                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="button" class="btn btn-inverse btn-lg" style="margin-left:15%;">Cancel</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="btn btn-success btn-lg"> <i class="fa fa-check"></i> Save</button>
+                                       
+                                        </div>
                                     </div>
+                                   
                                 </form>
                             </div>
                         </div>
                     </div>
-
+                    
                 
                 </div>
                 <!-- Row -->
-              
+                <div class="row">
+                    <div class="col-lg-6">
+
+                    </div>
+                    <div class="col-lg-6">
+                        Hello
+                    </div>
+                </div>
                 <!-- End PAge Content -->
             </div>
             <!-- End Container fluid  -->
@@ -391,7 +369,15 @@
     <script src="/static/Dashboard/light/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
     <script src="/static/Dashboard/light/js/custom.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
 
+              
+
+            }
+        )
+    </script>
 </body>
 
 </html>
