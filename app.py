@@ -73,6 +73,7 @@ def sign_action():
 
 @app.route('/strategy_action',methods=['POST'])
 def StrategyAction():
+
     ProjectName = request.form['ProjectName']
     LineCode = request.form['LineCode']
     Language = request.form['Language']
@@ -80,8 +81,10 @@ def StrategyAction():
     Check = request.form['Check']
     Function = request.form['Function']
     Config  = request.form['Config']
+    
     print(ProjectName,LineCode,Language,Cloud,Check,Function,Config)
     mongo.Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,session['email'])
+    print("Document Inserted")
     return "asd"
 
 if __name__ == "__main__":

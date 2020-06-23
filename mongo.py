@@ -15,7 +15,7 @@ print("MongoDB Connected")
 db = client['DeveloperDock']
 
 LoginCollection = db['Auth']
-
+ProjectCollection = db['Project']
 
 def Register(email,name,password):
     q1 = {"email":email}
@@ -56,3 +56,5 @@ def Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,email):
     l1 = { "Id": str(uuid.uuid4()),"Email":email,
         "ProjectName": ProjectName, "LineCode": LineCode, "Language": Language,
         "Cloud":Cloud,"Check":Check,"Function":Function, "Config": Config    }
+
+    ProjectCollection.insert_one(l1)
