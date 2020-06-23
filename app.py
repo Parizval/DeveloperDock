@@ -81,6 +81,7 @@ def StrategyAction():
     Function = request.form['Function']
     Config  = request.form['Config']
     print(ProjectName,LineCode,Language,Cloud,Check,Function,Config)
+    mongo.Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,session['email'])
     return "asd"
 
 if __name__ == "__main__":
