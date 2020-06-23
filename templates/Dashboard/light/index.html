@@ -37,7 +37,7 @@
 
                 <!-- Logo -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/dashboard">
                         <!-- Logo icon -->
                         <b><img src="/static/dashboard.png" alt="homepage" class="dark-logo" /></b>
                         <!--End Logo icon -->
@@ -89,6 +89,14 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebar-menu">
+                        <li class="nav-label">Home</li>
+                        <li> 
+                            <a href="/dashboard"><i class="fa fa-tachometer"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-label">Plan Strategy</li>
+                        <li> 
+                             <a href="/strategy"><i class="fa fa-columns"></i> Plan Project Strategy</a>
+                        </li>
                         <li class="nav-label">Layout</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-columns"></i><span class="hide-menu">Layout</span></a>
                             <ul aria-expanded="false" class="collapse">
@@ -98,103 +106,9 @@
                                 <li><a href="layout-fix-sidebar.html">Fix Sidebar</a></li>
                             </ul>
                         </li>
-                        <li class="nav-label">Apps &amp; Charts</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Mailbox</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="email-compose.html">Compose</a></li>
-                                <li><a href="email-read.html">Read</a></li>
-                                <li><a href="email-inbox.html">Inbox</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Charts</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="chart-morris.html">Morris</a></li>
-                                <li><a href="chart-chartjs.html">ChartJs</a></li>
-                                <li><a href="chart-chartist.html">Chartist </a></li>
-                                <li><a href="chart-amchart.html">AmChart</a></li>
-                                <li><a href="chart-echart.html">EChart</a></li>
-                                <li><a href="chart-sparkline.html">Sparkline</a></li>
-                                <li><a href="chart-peity.html">Peity</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-label">Features</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Ui Elements <span class="label label-rouded label-danger pull-right">12</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="ui-alert.html">Alert</a></li>
-                                <li><a href="ui-button.html">Button</a></li>
-                                <li><a href="ui-dropdown.html">Dropdown</a></li>
-                                <li><a href="ui-progressbar.html">Progressbar</a></li>
-                                <li><a href="ui-tab.html">Tab</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
-                                <li><a href="uc-calender.html">Calender</a></li>
-                                <li><a href="uc-datamap.html">Datamap</a></li>
-                                <li><a href="uc-nestedable.html">Nestedable</a></li>
-                                <li><a href="uc-sweetalert.html">Sweetalert</a></li>
-                                <li><a href="uc-toastr.html">Toastr</a></li>
-                                <li><a href="uc-weather.html">Weather</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Forms</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="form-basic.html">Basic Forms</a></li>
-                                <li><a href="form-layout.html">Form Layout</a></li>
-                                <li><a href="form-validation.html">Form Validation</a></li>
-                                <li><a href="form-editor.html">Editor</a></li>
-                                <li><a href="form-dropzone.html">Dropzone</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="table-bootstrap.html">Basic Tables</a></li>
-                                <li><a href="table-datatable.html">Data Tables</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="ti-wallet m-r-5"></i><span class="hide-menu">Widgets</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="widget.html">Widgets</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-label">EXTRA</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Sample Pages <span class="label label-rouded label-success pull-right">8</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#" class="has-arrow">Authentication <span class="label label-rounded label-success">3</span></a>
-                                    <ul aria-expanded="false" class="collapse">
-                                        <li><a href="page-login.html">Login</a></li>
-                                        <li><a href="page-register.html">Register</a></li>
-                                        <li><a href="page-invoice.html">Invoice</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" class="has-arrow">Error Pages</a>
-                                    <ul aria-expanded="false" class="collapse">
-                                        <li><a href="page-error-400.html">400</a></li>
-                                        <li><a href="page-error-403.html">403</a></li>
-                                        <li><a href="page-error-404.html">404</a></li>
-                                        <li><a href="page-error-500.html">500</a></li>
-                                        <li><a href="page-error-503.html">503</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-map-marker"></i><span class="hide-menu">Maps</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="map-vector.html">Vector Map</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-level-down"></i><span class="hide-menu">Multi level dd</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">item 1.1</a></li>
-                                <li><a href="#">item 1.2</a></li>
-                                <li> <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
-                                    <ul aria-expanded="false" class="collapse">
-                                        <li><a href="#">item 1.3.1</a></li>
-                                        <li><a href="#">item 1.3.2</a></li>
-                                        <li><a href="#">item 1.3.3</a></li>
-                                        <li><a href="#">item 1.3.4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">item 1.4</a></li>
-                            </ul>
-                        </li>
+                   
+                     
+                       
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -227,8 +141,8 @@
                                     <span><i class="ti-bag f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white text-white">278</h2>
-                                    <p class="m-b-0 text-white">New Posts</p>
+                                    <h2 class="color-white text-white">{{ StatData['Project'] }}</h2>
+                                    <p class="m-b-0 text-white">Projects Created</p>
                                 </div>
                             </div>
                         </div>
@@ -240,8 +154,8 @@
                                     <span><i class="ti-comment f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white text-white">278</h2>
-                                    <p class="m-b-0 text-white">New Comment</p>
+                                    <h2 class="color-white text-white">{{ StatData['Private'] }}</h2>
+                                    <p class="m-b-0 text-white">Private Cloud Applications</p>
                                 </div>
                             </div>
                         </div>
@@ -253,8 +167,8 @@
                                     <span><i class="ti-vector f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white text-white">$27647</h2>
-                                    <p class="m-b-0 text-white">Bounce Rate</p>
+                                    <h2 class="color-white text-white">{{ StatData['Public'] }}</h2>
+                                    <p class="m-b-0 text-white">Pubic Cloud Applications</p>
                                 </div>
                             </div>
                         </div>
@@ -266,8 +180,8 @@
                                     <span><i class="ti-location-pin f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white text-white">278</h2>
-                                    <p class="m-b-0 text-white">Total Visitor</p>
+                                    <h2 class="color-white text-white">{{ StatData['Language'] }}</h2>
+                                    <p class="m-b-0 text-white">Lanuages Utilized</p>
                                 </div>
                             </div>
                         </div>
@@ -275,6 +189,46 @@
                 </div>
 
                 <div class="row">
+                    
+                    <!-- /# column -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4> Projects </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Project Name</th>
+                                                <th>BackEnd Language</th>
+                                                <th>Cloud Type </th>
+                                                <th>Functionality</th>
+                                                <th>Strategy</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in TableData %}
+                                            <tr>
+                                                <td>
+                                                   {{ TableData[i]['Project'] }}
+                                                </td>
+                                                <td>
+                                                    {{ TableData[i]['Language'] }}
+                                                </td>
+                                                <td><span>{{ TableData[i]['Cloud'] }}</span></td>
+                                                <td><span>{{ TableData[i]['Function'] }}</span></td>
+                                                <td><span class="badge badge-success">{{ TableData[i]['Result'] }}</span></td>
+                                            </tr>
+
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-title">
@@ -297,41 +251,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /# column -->
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-title">
-                                <h4> Projects </h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Id</th>
-                                                <th>Name</th>
-                                                <th>Strategy</th>
-                                                <th>BackEnd Language</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                   Number
-                                                </td>
-                                                <td>Lew Shawon</td>
-                                                <td><span>Dell-985</span></td>
-                                                <td><span>456 pcs</span></td>
-                                                <td><span class="badge badge-success">Done</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- /# column -->
                 </div>
                 <!-- /# row -->

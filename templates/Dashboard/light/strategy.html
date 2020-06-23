@@ -25,7 +25,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <!-- Logo -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/dashboard">
                         <!-- Logo icon -->
                         <b><img src="/static/dashboard.png" alt="homepage" class="dark-logo" /></b>
                         <!--End Logo icon -->
@@ -188,7 +188,11 @@
                                             <div class="col-md-6">
                                                 <div class="form-group has-danger">
                                                     <label class="control-label">Lines of Code</label>
-                                                    <input type="number" id="LineCode" class="form-control form-control-danger" placeholder="1000">
+                                                    <select class="form-control" id="LineCode">
+                                                        <option value="Small">0 - 3000 Lines of Code </option>
+                                                        <option value="Medium">3001 - 10000 Lines of Code  </option>
+                                                        <option value="High"> Above 10000 Lines of Code</option>
+                                                    </select>
                                                     <small class="form-control-feedback"> Code required to develop the BackEnd . </small> </div>
                                             </div>
                                             <!--/span-->
@@ -251,8 +255,6 @@
                                                             </div>
                                                             <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> 
                                                         </div>
-                                                    
-                                                        
                                                 </div>
                                                 <!--/span-->
                                                 <div class="col-md-6">
@@ -262,11 +264,16 @@
                                                             <option>--Select your Objective --</option>
                                                             <option value="Simple">Simple Web Application</option>
                                                             <option value="Payment">Payment GateWay or Session Based Application</option>
-                                                            <option value="Other">Other Function</option>
+                                                            <option value="High">Other Function</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <!--/span-->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 offset-md-6">
+                                                    <button type="button" class="btn btn-success btn-lg" id="KubeForm"> <i class="fa fa-check"></i> Submit </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <!--/row-->
@@ -279,23 +286,24 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Functionalities Involved </label>
-                                                        <select class="form-control" id="Function">
+                                                        <select class="form-control" id="NormalFunction">
                                                             <option>--Select your Objective --</option>
                                                             <option value="Simple">Simple Web Application/LMS/</option>
                                                             <option value="Payment">Payment GateWay or Session</option>
-                                                            <option value="Other">High Performance/High Usage Application</option>
+                                                            <option value="High">High Performance/High Usage Application</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <!--/span-->
                                             </div>
+                                            <div class="row">
+                                                <div class="col-md-6 offset-md-6">
+                                                    <button type="button" class="btn btn-success btn-lg" id="NormalForm"> <i class="fa fa-check"></i> Submit Normal</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 offset-md-6">
-                                            <button type="button" class="btn btn-success btn-lg" id="Submit-Form"> <i class="fa fa-check"></i> Submit</button>
-                                        </div>
-                                    </div>
+                                   
                                    
                                 </form>
                             </div>
@@ -376,9 +384,7 @@
                         LineCode :$('#LineCode').val(),
                         Language: $('#Language').val(),
                         Cloud: $("input:radio[name='exampleRadios']").val(),
-                        Check: check,
-                        Function: $('#Function').val(),
-                        Config :  $("input:radio[name='Config']").val()
+                        Function: $('#Function').val()
                     },
                     type : "POST",
                     url : '/strategy_action'
@@ -398,6 +404,38 @@
 	            event.preventDefault();
 
             });
+
+
+
+            $("#NormalForm").click(function(){
+
+                    $.ajax({
+                        data :{
+                            ProjectName : $('#ProjectName').val(),
+                            LineCode :$('#LineCode').val(),
+                            Language: $('#Language').val(),
+                            Function: $('#NormalFunction').val()
+                        },
+                        type : "POST",
+                        url : '/strategy_normal'
+                    })
+                    .done(function(data){
+
+                    if (data.check)
+                    {
+                        alert("Data Model Prepared");
+                        alert(data.output)
+                    }
+                    else{
+                        
+                        alert("Invalid Credentials");
+                    }
+
+                    });
+                    event.preventDefault();
+
+                });
+
 
             }
         )
