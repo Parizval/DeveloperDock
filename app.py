@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import mongo
-
+import NormalModel
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -18,7 +18,8 @@ def LoginPage():
 @app.route("/dashboard")
 def DashBoardPage():
     if "name" in session:
-        return render_template("/Dashboard/light/index.html",name=session['name'],email=session['email'])
+        StatData,TableData =  mongo.ProjectStats(session['email'])
+        return render_template("/Dashboard/light/index.html",name=session['name'],email=session['email'],StatData=StatData,TableData=TableData)
     return redirect("/")
 
 @app.route("/logout")
@@ -79,16 +80,31 @@ def StrategyAction():
     LineCode = request.form['LineCode']
     Language = request.form['Language']
     Cloud = request.form['Cloud']
-    Check = request.form['Check']
+   
     Function = request.form['Function']
-    Config  = request.form['Config']
+   
+    print(ProjectName,LineCode,Language,Cloud,Function)
     
-    print(ProjectName,LineCode,Language,Cloud,Check,Function,Config)
-    mongo.Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,session['email'])
+
+    #mongo.Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,session['email'])
     print("Document Inserted")
     data = {}
     data['check'] = "message"
     return data  
 
+@app.route('/strategy_normal',methods=['POST'])
+def NormalStrategy():
+    ProjectName = request.form['ProjectName']
+    LineCode = request.form['LineCode']
+    Language = request.form['Language']
+    Function = request.form['Function']
+
+    print(ProjectName,LineCode,Language,Function)
+    result = NormalModel.NormalPrediction(Language,Function,LineCode)
+    mongo.NormalProject(ProjectName,LineCode,Language,Function,result,session['email'])
+    data = {}
+    data['check'] = True 
+    data['output'] = result
+    return data
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000)

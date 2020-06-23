@@ -58,3 +58,41 @@ def Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,email):
         "Cloud":Cloud,"Check":Check,"Function":Function, "Config": Config    }
 
     ProjectCollection.insert_one(l1)
+
+def NormalProject(ProjectName,LineCode,Language,Function,result,email):
+
+    l1 = { "Id": str(uuid.uuid4()),"Email":email,"Type":"Normal",
+        "ProjectName": ProjectName, "LineCode": LineCode, "Language": Language,
+        "Function":Function, "Result": result    }
+    
+    ProjectCollection.insert_one(l1)
+
+def ProjectStats(email):
+    l1 = {"Email": email}
+  
+    
+    StatData = {}
+    TableData = {}
+    counter = 1
+    Lang = []
+
+    StatData['Project'] = 0 
+    StatData['Public'] = 0 
+    StatData['Private'] = 0 
+
+
+    res = ProjectCollection.find(l1)
+    for  i in  res:
+        StatData['Project'] += 1 
+
+        TableData[counter] = {"Project":i['ProjectName'],'Language':i['Language'],"Function":i['Function'],"Result":i['Result']}
+
+        Lang.append(i['Language'])
+        if i['Type'] == "Normal":
+            StatData['Public'] += 1  
+            TableData[counter]['Cloud'] = "Public"
+        else: 
+            pass
+        counter += 1 
+    StatData['Language'] = len(set(Lang))
+    return StatData,TableData
