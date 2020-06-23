@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import mongo
 import NormalModel
+import NormalFormat
+
+
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -101,10 +104,13 @@ def NormalStrategy():
 
     print(ProjectName,LineCode,Language,Function)
     result = NormalModel.NormalPrediction(Language,Function,LineCode)
+    Format = NormalFormat.Formatting(result)
+    print(Format)
     mongo.NormalProject(ProjectName,LineCode,Language,Function,result,session['email'])
     data = {}
     data['check'] = True 
     data['output'] = result
+    data['Format'] = Format
     return data
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000)

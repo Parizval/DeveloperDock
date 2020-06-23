@@ -314,12 +314,15 @@
                 </div>
                 <!-- Row -->
                 <div class="row" id="Result">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 offset-md-3">
+                        <div class="alert alert-success">
+                            <h2 id="Result-Heading"></h2>
+                            <div id="Result-Docs">
 
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        Hello
-                    </div>
+                    
                 </div>
                 <!-- End PAge Content -->
             </div>
@@ -423,8 +426,10 @@
 
                     if (data.check)
                     {
-                        alert("Data Model Prepared");
-                        alert(data.output)
+                       
+                        $("#Result").show();
+                        $("#Result-Heading").text(data.Format.Heading);
+                        $("#Result-Docs").html(data.Format.Link);
                     }
                     else{
                         
