@@ -1,5 +1,5 @@
 # ![](https://github.com/Parizval/DeveloperDock/blob/master/enterprise.png) Developer Dock
-###### An implementation of Graph theory on the financial sector.
+###### An implementation to classify load balancing strategies based on Decision Trees.
 
 
 ## Basic Defintions 
