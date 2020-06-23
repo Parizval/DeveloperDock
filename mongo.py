@@ -70,7 +70,13 @@ def NormalProject(ProjectName,LineCode,Language,Function,result,email):
 def ProjectStats(email):
     l1 = {"Email": email}
   
-    
+    NormalResult = {"Network":"Network Load Balancer (v2)" , "Serverless":"AWS Lambda",
+    "Application":"Application Load Balancer (v2)","Sticky":"Session Based Load Balancer"}
+
+    NormalFunction = {"Simple":"Simple Web Application/LMS/","Payment":"Payment GateWay or Session",
+    "High":"High Performance/High Usage Application"
+    }
+
     StatData = {}
     TableData = {}
     counter = 1
@@ -81,16 +87,19 @@ def ProjectStats(email):
     StatData['Private'] = 0 
 
 
+
     res = ProjectCollection.find(l1)
     for  i in  res:
         StatData['Project'] += 1 
 
-        TableData[counter] = {"Project":i['ProjectName'],'Language':i['Language'],"Function":i['Function'],"Result":i['Result']}
+        TableData[counter] = {"Project":i['ProjectName'],'Language':i['Language']}
 
         Lang.append(i['Language'])
         if i['Type'] == "Normal":
             StatData['Public'] += 1  
             TableData[counter]['Cloud'] = "Public"
+            TableData[counter]["Result"] = NormalResult[i['Result']]
+            TableData[counter]['Function'] = NormalFunction[i['Function']]
         else: 
             pass
         counter += 1 
