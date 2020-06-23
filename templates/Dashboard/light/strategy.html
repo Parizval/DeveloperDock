@@ -76,19 +76,12 @@
                     <ul id="sidebar-menu">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu"> <span class="label label-rouded label-primary pull-right">6</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="index.html">Dashboard 1 </a></li><li><a href="index1.html">Dashboard 2 </a></li><li><a href="index2.html">Dashboard 3 </a></li><li><a href="index3.html">Dashboard 4 </a></li><li><a href="index4.html">Dashboard 5 </a></li><li><a href="index5.html">Dashboard 6 </a></li>
-                            </ul>
+                        <li> 
+                            <a href="/dashboard"><i class="fa fa-tachometer"></i> Dashboard</a>
                         </li>
-                        <li class="nav-label">Layout</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-columns"></i><span class="hide-menu">Layout</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="layout-blank.html">Blank</a></li>
-                                <li><a href="layout-boxed.html">Boxed</a></li>
-                                <li><a href="layout-fix-header.html">Fix Header</a></li>
-                                <li><a href="layout-fix-sidebar.html">Fix Sidebar</a></li>
-                            </ul>
+                        <li class="nav-label">Plan Strategy</li>
+                        <li> 
+                             <a href="/strategy"><i class="fa fa-columns"></i> Plan Project Strategy</a>
                         </li>
                         <li class="nav-label">Apps &amp; Charts</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Mailbox</span></a>
@@ -232,52 +225,34 @@
                                         <div class="row">
                                             
                                             <!--/span-->
-                                            <div class="col-md-6 offset-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Deployment Cloud</label>
-                                                    <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Public" checked>
-                                                    <label class="form-check-label" for="exampleRadios1">
-                                                        Public Cloud 
-                                                    </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Private">
-                                                    <label class="form-check-label" for="exampleRadios2">
-                                                        Private Cloud
-                                                    </label>
-                                                    </div>
-                                                    <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> 
-                                                </div>
-                                            
-                                                </div>
+                                           
                                             </div>
                                             <!--/span-->
                                         </div>
                                         <!--/row-->
-                                        <div id="ExtraSection">
-                                            <h3 class="box-title m-t-40">Additional Details Regarding Project</h3>
+                                        <div id="KubeSection">
+                                            <h3 class="box-title m-t-40">Additional Details Regarding Kubernetes Project</h3>
                                             <hr>
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
+                                                <div class="col-md-3 offset-md-2">  
                                                         <div class="form-group">
-                                                            <label class="control-label">Do the Servers have identical configuration.</label>
+                                                            <label class="control-label">Deployment Cloud</label>
                                                             <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="Config" id="example1" value="Yes" checked>
-                                                            <label class="form-check-label" for="example1">
-                                                                Yes
+                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Public" checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Public Cloud 
                                                             </label>
                                                             </div>
                                                             <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="Config" id="example2" value="No">
-                                                            <label class="form-check-label" for="example2">
-                                                                No
+                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Private">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                Private Cloud
                                                             </label>
                                                             </div>
-                                                            <small class="form-control-feedback"> Identical configuration means that they have same amount of RAM, Storage etc. </small> 
+                                                            <small class="form-control-feedback"> Public Cloud such as AWS, GCP, OpenStack and many more. </small> 
                                                         </div>
-                                                    </div>
+                                                    
+                                                        
                                                 </div>
                                                 <!--/span-->
                                                 <div class="col-md-6">
@@ -286,7 +261,7 @@
                                                         <select class="form-control" id="Function">
                                                             <option>--Select your Objective --</option>
                                                             <option value="Simple">Simple Web Application</option>
-                                                            <option value="Payment">Payment GateWay or Session</option>
+                                                            <option value="Payment">Payment GateWay or Session Based Application</option>
                                                             <option value="Other">Other Function</option>
                                                         </select>
                                                     </div>
@@ -295,10 +270,28 @@
                                             </div>
                                         </div>
                                         <!--/row-->
-                                        
+                                        <div id="NormalSection">
+                                            <h3 class="box-title m-t-40">Additional Details Regarding Project with Normal Load Balancers.</h3>
+                                            <hr>
+                                            <div class="row">
+                                                
+                                                <!--/span-->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Functionalities Involved </label>
+                                                        <select class="form-control" id="Function">
+                                                            <option>--Select your Objective --</option>
+                                                            <option value="Simple">Simple Web Application/LMS/</option>
+                                                            <option value="Payment">Payment GateWay or Session</option>
+                                                            <option value="Other">High Performance/High Usage Application</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!--/span-->
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row">
-                                       
                                         <div class="col-md-6 offset-md-6">
                                             <button type="button" class="btn btn-success btn-lg" id="Submit-Form"> <i class="fa fa-check"></i> Submit</button>
                                         </div>
@@ -347,22 +340,30 @@
         $(document).ready(
             function(){
             
-            var check = false; 
+            var Kube = false; 
+            var Normal = false ;  
 
-            $("#ExtraSection").hide();
+            $("#KubeSection").hide();
+            $("#NormalSection").hide();
             $("#Result").hide();
             
             
             $("#Kube-Yes").click(function(){
                 
-                $("#ExtraSection").show();
-                check = true ; 
+                $("#KubeSection").show();
+                $("#NormalSection").hide();
+           
+                Kube = true ;
+                Normal = false; 
             });
            
             $('#Kube-No').click(function(){
            
-                $("#ExtraSection").hide();
-                check = false;  
+                $("#NormalSection").show();
+                $("#KubeSection").hide();
+                
+                Kube = false;  
+                Normal = true; 
             });
 
 
@@ -386,7 +387,7 @@
 		
 				  if (data.check)
                   {
-					$(location).attr('href', data.link);
+					alert("Data Model Prepared");
                   }
                   else{
                       

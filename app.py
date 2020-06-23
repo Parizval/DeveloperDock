@@ -36,6 +36,7 @@ def Strategy():
 def error404(error):
     return render_template('404.html'), 404
 
+
 # Ajax Function 
 @app.route('/login_action', methods=['POST'])
 def login_action():
@@ -85,7 +86,9 @@ def StrategyAction():
     print(ProjectName,LineCode,Language,Cloud,Check,Function,Config)
     mongo.Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,session['email'])
     print("Document Inserted")
-    return "asd"
+    data = {}
+    data['check'] = "message"
+    return data  
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000)
