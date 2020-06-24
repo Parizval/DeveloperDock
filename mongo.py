@@ -77,6 +77,9 @@ def ProjectStats(email):
     "High":"High Performance/High Usage Application"
     }
 
+    KubeHeading = {"Kubeless":" Kubeless Functions" , 
+    "Round Robin":"Round Robin Load Balancer (v2)","Ring Hash":"Ring Hash Load Balancing Algorithm"}
+
     StatData = {}
     TableData = {}
     counter = 1
@@ -100,8 +103,14 @@ def ProjectStats(email):
             TableData[counter]['Cloud'] = "Public"
             TableData[counter]["Result"] = NormalResult[i['Result']]
             TableData[counter]['Function'] = NormalFunction[i['Function']]
-        else: 
-            pass
+        else:
+            if  i['Cloud'] == 'Public': 
+                StatData['Public'] += 1  
+            else: 
+                StatData['Private'] += 1  
+            TableData[counter]['Cloud'] = i['Cloud']
+            TableData[counter]["Result"] = KubeHeading[i['Result']]
+            TableData[counter]['Function'] = NormalFunction[i['Function']]
         counter += 1 
     StatData['Language'] = len(set(Lang))
     return StatData,TableData
