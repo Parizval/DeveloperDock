@@ -1,12 +1,11 @@
 strategy = {}
 
 NormalHeading = {"Kubeless":" Kubeless Functions" , 
-    "Round Robin":"Application Load Balancer (v2)","Ring Hash":"Ring Hash Load Balancing Algorithm"}
+    "Round Robin":"Round Robin Load Balancer (v2)","Ring Hash":"Ring Hash Load Balancing Algorithm"}
 
-NormalDocs =  {"Network":"<a href='https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html'  target='_blank'>Link to AWS Docs</a>" ,
- "Serverless":"<a href='https://docs.aws.amazon.com/lambda/index.html' target='_blank'>Link to AWS Docs</a>",
-    "Application":"<a href='https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html' target='_blank'>Link to AWS Docs</a>",
-    "Sticky":"<a href='https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html' target='_blank'>Link to AWS Docs</a>"}
+NormalDocs =  {"Kubeless":"<a href='https://kubeless.io'  target='_blank'>Kubeless Solution</a>" ,
+    "Round Robin":"<a href='www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/load_balancers.html' target='_blank'>Round Robing using kube-proxy or Envoy Proxy</a>",
+    "Ring Hash":"<a href='www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/load_balancers.html' target='_blank'> Ring Hash using Envoy Proxy</a>"}
 
 def Formatting(result):
     data = {}

@@ -52,10 +52,10 @@ def Login(email,password):
     print(data)
     return data
 
-def Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,email):
-    l1 = { "Id": str(uuid.uuid4()),"Email":email,
+def Project(ProjectName,LineCode,Language,Cloud,Function,result,email):
+    l1 = { "Id": str(uuid.uuid4()),"Email":email,"Type":"Kube",
         "ProjectName": ProjectName, "LineCode": LineCode, "Language": Language,
-        "Cloud":Cloud,"Check":Check,"Function":Function, "Config": Config    }
+        "Cloud":Cloud,"Function":Function, "Result": result    }
 
     ProjectCollection.insert_one(l1)
 

@@ -1,8 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import mongo
-import NormalModel
-import NormalFormat
 
+import NormalModel
+import KubeModel
+
+import NormalFormat
+import KubeFormat
 
 
 app = Flask(__name__, static_url_path='/static')
@@ -12,10 +15,14 @@ app.secret_key = "Nothing"
 
 @app.route("/")
 def index():
+    if "name" in session:
+        return redirect("/dashboard")
     return render_template("index.html")
 
 @app.route("/login")
 def LoginPage():
+    if "name" in session:
+        return redirect("/dashboard")
     return render_template("login.html")
 
 @app.route("/dashboard")
@@ -88,11 +95,15 @@ def StrategyAction():
    
     print(ProjectName,LineCode,Language,Cloud,Function)
     
-
-    #mongo.Project(ProjectName,LineCode,Language,Cloud,Check,Function,Config,session['email'])
-    print("Document Inserted")
+    result = KubeModel.KubePrediction(Language,Function,LineCode)
+    print(result)
+    Format = KubeFormat.Formatting(result)
+    mongo.Project(ProjectName,LineCode,Language,Cloud,Function,result,session['email'])
+    
     data = {}
-    data['check'] = "message"
+    data['check'] = True
+    data['output'] = result
+    data['Format'] = Format
     return data  
 
 @app.route('/strategy_normal',methods=['POST'])
@@ -102,10 +113,9 @@ def NormalStrategy():
     Language = request.form['Language']
     Function = request.form['Function']
 
-    print(ProjectName,LineCode,Language,Function)
     result = NormalModel.NormalPrediction(Language,Function,LineCode)
     Format = NormalFormat.Formatting(result)
-    print(Format)
+    
     mongo.NormalProject(ProjectName,LineCode,Language,Function,result,session['email'])
     data = {}
     data['check'] = True 
