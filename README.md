@@ -4,17 +4,15 @@
 
 ## Basic Defintions 
 
-**Portolio** is a collection of investments held by a person or company.
+**Load Balancing** is the process of distributing network traffic across multiple servers.
 
-**Portfolio Management** is management of various securities and other assets to meet 
-specific investment goals.
+**Kubernetes** is an open-source container-orchestration system for automating application deployment, scaling, and management.
 
-**Portfolio Diversification** is dissemination of investments 
-to limit exposure to risk.
+**Load Balancing Strategy** is opting optimal strategy to share  load among the servers. 
+
 
 ## Objective of the Product
-   The purpose of portfolio diversification is to minimize losses and 
-    diversify the financial assets of the investor.
+   The purpose of Developer Dock is to help app developers choose appropiate load balancing strategy for their applications.
 
 ## Description of Product
 
@@ -79,6 +77,3 @@ The features offered include:
 
 1. [Anmol Goyal](https://github.com/Parizval)
 
-2. [Rohun Rajvanshi]()
-
-3. [Ansh Arora]()
