@@ -53,8 +53,12 @@
 								<div class="logo"><a href="/" style="color: black; font-size: 180%;">Developer Dock</a></div>
 								
 								<ul class="right-widget celarfix">
-									
-									<li class="login-button"><a href="/login">Login <i class="flaticon-right-thin"></i></a></li>
+									{% if check %}
+									<li class="login-button"><a href="/dashboard">Dashboard <i class="flaticon-right-thin"></i></a></li>
+									{% else %}
+									<li class="login-button"><a href="/login">Login  <i class="flaticon-right-thin"></i></a></li>
+									{% endif %}
+								
 								</ul> <!-- /.right-widget -->
 								<!-- Navigation -->
 							    <nav class="navbar navbar-expand-lg" id="mega-menu-holder">
@@ -134,7 +138,7 @@
 										<img src="/static/LandingPage/images/icons8-kubernetes-144.png" alt="" class="primary-icon">
 									</div>
 									<h3>Kubernetes Advance Load Balancing Strategy</h3>
-									<p>Sending and receiving addresses as well as transacted amounts.</p>
+									<p>Apply Strategies such as  Kubeless, Ring Hash, Manglev to your application.</p>
 								</div> <!-- /.single-feature -->
 							</div> <!-- /.col- -->
 							<div class="col-md-4 col-xs-12">
@@ -143,7 +147,7 @@
 										<img src="/static/LandingPage/images/machine-learning.png" alt="" class="primary-icon">
 									</div>
 									<h3>Machine Learning Computing.</h3>
-									<p>cryto has striven to solve blockchain governance, transparency brings </p>
+									<p>Strategic Decisions are computed with the help of machine learning algorithms </p>
 								</div> <!-- /.single-feature -->
 							</div> <!-- /.col- -->
 							<div class="col-md-4 col-xs-12">

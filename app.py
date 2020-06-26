@@ -15,9 +15,10 @@ app.secret_key = "Nothing"
 
 @app.route("/")
 def index():
+    check = False
     if "name" in session:
-        return redirect("/dashboard")
-    return render_template("index.html")
+        check = True 
+    return render_template("index.html",check=check)
 
 @app.route("/login")
 def LoginPage():
