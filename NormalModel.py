@@ -1,10 +1,12 @@
 import pickle 
+import os 
 
 language = {"Python":4,"NodeJs":2,"Java":1,"Go":0,"Other":3}
 function = {"Simple":2,"Payment":1,"High":0}
 CodeSize = {"Small":2,"Medium":1,"High":0}
 
 
+path = os.path.join(os.getcwd(),"model","Normal_Pickle")
 with open('Normal_Pickle','rb') as f:
     normal_model =  pickle.load(f)
 
