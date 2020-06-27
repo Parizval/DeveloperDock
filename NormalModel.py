@@ -7,7 +7,7 @@ CodeSize = {"Small":2,"Medium":1,"High":0}
 
 
 path = os.path.join(os.getcwd(),"model","Normal_Pickle")
-with open('Normal_Pickle','rb') as f:
+with open(path,'rb') as f:
     normal_model =  pickle.load(f)
 
 
