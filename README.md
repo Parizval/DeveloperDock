@@ -48,7 +48,7 @@ The features offered include:
          It is must for any inverstor to have an exit strategy. Most people don't pay attention to it and thus hurt                               their chances of maximizing profits. We update the user about their portfolios in case of sudden movements in                           the market. The users are asked for their stop loss and take profits and are immediately notified once the set                           criterion is met.
 
 ## Screenshots
-![](https://github.com/Parizval/Diversify/blob/master/img/Screenshot_2019-10-06%20Portfolio%20Management.png)
+![](https://github.com/Parizval/DeveloperDock/blob/master/srs/screencapture-developerdock-herokuapp-2020-07-06-23_38_17.png)
 ![](https://github.com/Parizval/Diversify/blob/master/img/Screenshot_2019-10-06%20PortfolioManagement%20Dashboard.png)
 ![](https://github.com/Parizval/Diversify/blob/master/img/Screenshot_2019-10-06%20PortfolioManagement%20Dashboard(1).png)
 ![](https://github.com/Parizval/Diversify/blob/master/img/Screenshot_2019-10-06%20PortfolioManagement%20Dashboard(2).png)
