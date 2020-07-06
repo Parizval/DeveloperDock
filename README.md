@@ -68,6 +68,9 @@ The features offered include:
   - pandas
   - numpy
   - Flask
+  - scikit-learn
+  - pickle
+  
  
 ## Developers
 
