@@ -53,12 +53,13 @@ The features offered include:
 
 ## Technology Stack
 
+![](https://github.com/Parizval/DeveloperDock/blob/master/srs/icons8-amazon-web-services-96.png)  
 ![](https://github.com/Parizval/Diversify/blob/master/img/python.png)  
 ![](https://github.com/Parizval/Diversify/blob/master/img/javascript.png)  
 ![](https://github.com/Parizval/Diversify/blob/master/img/browser.png)  
 ![](https://github.com/Parizval/Diversify/blob/master/img/bootstrap.jpg)  
 ![](https://github.com/Parizval/Diversify/blob/master/img/MongoDb.png)  
-![](https://github.com/Parizval/Diversify/blob/master/img/connection.png)
+
 ## Python Dependencies
 
   - dnspython
