@@ -50,7 +50,7 @@ The features offered include:
 ## Screenshots
 ![](https://github.com/Parizval/DeveloperDock/blob/master/srs/screencapture-developerdock-herokuapp-2020-07-06-23_38_17.png)
 ![](https://github.com/Parizval/DeveloperDock/blob/master/srs/screencapture-developerdock-herokuapp-strategy-2020-07-06-23_40_26.png)
-
+![](https://github.com/Parizval/DeveloperDock/blob/master/srs/methodology.png)
 ## Technology Stack
 
 ![](https://github.com/Parizval/DeveloperDock/blob/master/srs/icons8-amazon-web-services-96.png)
